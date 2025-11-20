@@ -41,8 +41,8 @@ while True:
     uuesti = input("\nKas mängida järgmine voor? (jah/ei): ").lower()
     if uuesti != "jah":
         break
-print("\n=== MÄNG LÕPPES ===")
-print("Voorude valikud:", vooru_valikud)
-print("Voorude tulemused:", vooru_tulemused)
-print("Lõplik tabel:", punktid)
+print("Mäng lõppes")
+print(f"Voorude valikud:{vooru_valikud}")
+print(f"Voorude tulemused:{vooru_tulemused}")
+print(f"Lõplik tabel:{punktid}")
 
