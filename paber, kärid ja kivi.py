@@ -10,7 +10,6 @@ punktid = {"Inimene": 0, "Robot": 0}
 vooru_valikud = []
 vooru_tulemused = []
 while True:
-    print("\n--- Uus voor ---")
     while True:
         kasutaja_valik = input("Sisesta kivi, paber või käärid: ").lower()
         if kasutaja_valik in valikud:
