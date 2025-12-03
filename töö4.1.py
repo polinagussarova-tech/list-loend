@@ -406,3 +406,43 @@ print("Meie loendis on", len(pealinnad), "Euroopa pealinna.")
 #kontrolli, kas sõna „tre” on olemas
 #kuva kõik loendid tähestikulises järjekorras
 
+arv = [1, 2, 3, 4]
+eesti = ["üks", "kaks", "kolm", "neli"]
+inglise = ["one", "two", "three", "four"]
+itaalia = ["uno", "due", "tre", "quattro"]
+
+for i in range(len(arv)):
+    print(arv[i], "-", eesti[i], "-", inglise[i], "-", itaalia[i])
+
+
+arv.append(5)
+eesti.append("viis")
+inglise.append("five")
+itaalia.append("cinque")
+
+arv.append(6)
+eesti.append("kuus")
+inglise.append("six")
+itaalia.append("sei")
+
+if "tre" in itaalia:
+    print("Sõna 'tre' on olemas!")
+else:
+    print("Sõna 'tre' puudub.")
+
+print(f"Eesti {sorted(eesti)}")
+print(f"Inglise {sorted(inglise)}")
+print(f"Itaalia {sorted(itaalia)}")
+
+
+№1️⃣6️⃣ Jah/Ei vastus 🎱
+№Koosta loend vastustega:
+№„Jah, kindlasti!”, „Jah!”, „Võib-olla!”, „Ei!”
+№Programm peab andma juhusliku vastuse kasutaja küsimusele.
+
+import random
+
+vastused = ["Jah, kindlasti!", "Jah!", "Võib-olla!", "Ei!"]
+
+input("Küsi midagi: ")
+print(random.choice(vastused))
