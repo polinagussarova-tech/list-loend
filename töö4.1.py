@@ -376,3 +376,33 @@ print(f"Arvasid ära! Katsed {katsed}")
 #kuva neid veeruna
 
 
+10 pealinna
+pealinnad = ["Tallinn", "Riga", "Vilnius", "Helsinki", "Stockholm","Oslo", "Copenhagen", "Berlin", "Warsaw", "Paris"]
+for linn in pealinnad:
+    print(linn)
+
+sortimine
+pealinnad.sort()
+
+uus_pealinn = input("Lisa pealinn: ")
+uus_pealinn2 = input("Lisa veel üks: ")
+
+pealinnad.append(uus_pealinn)
+pealinnad.append(uus_pealinn2)
+
+pealinnad.sort()
+
+for i in range(len(pealinnad)):
+    print(i + 1, pealinnad[i])
+print("Meie loendis on", len(pealinnad), "Euroopa pealinna.")
+
+
+#1️⃣5️⃣ Lihtne sõnaraamat 📚
+#Koosta 4 loendit (arv, eesti, inglise, itaalia).
+#Kuva tabelina:
+#1 – üks – one – uno
+#Lisaks:
+#lisa kaks uut elementi
+#kontrolli, kas sõna „tre” on olemas
+#kuva kõik loendid tähestikulises järjekorras
+
