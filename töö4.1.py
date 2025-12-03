@@ -23,7 +23,7 @@
 #print(f"Sõnas/lausees on {täishäälikud}täishäälikut, {kaashäälikud} kaashäälikut ja {märgid} märki.")
 
 
-#2️⃣ Loendid
+#2️ Loendid
 #2.1 Nimed 👥
 #Küsi kasutajalt viis nime.
 #Salvesta nimed loendisse ja kuva need tähestikulises järjekorras.
@@ -233,3 +233,146 @@
 
   #  unikaalsed = sorted(set(nimi.lower()))
  #   print("Tähed tähestiku järjekorras:", "".join(unikaalsed))
+
+
+
+
+#🔟 Töötajate andmed 💼
+#Leia antud andmete põhjal:
+#suurima palgaga töötaja
+#keskmine palk
+#mitu teenib üle keskmise
+#keskmine vanus gruppidel: ≤ keskmine ja > keskmine
+
+tootajad = ["Mari", 25, 1500, "Jüri", 40, 2100, "Kati", 29, 1800,и"Peeter", 50, 2500, "Anna", 35, 1900]
+suurim_palk = 0
+suurim_nimi = ""
+
+for i in range(0, len(tootajad), 3):
+    nimi = tootajad[i]
+    palk = tootajad[i+2]
+    if palk > suurim_palk:
+        suurim_palk = palk
+        suurim_nimi = nimi
+
+print(f"Suurim palk {suurim_nimi}, {suurim_palk}")
+
+palg = []
+for i in range(2, len(tootajad), 3):
+    palg.append(tootajad[i])
+
+keskmine = sum(palgad) / len(palgad)
+print(f"Keskmine round{keskmine, 2}")
+
+ule = 0
+for palk in palgad:
+    if palk > keskmine:
+        ule += 1
+
+print(f"Üle keskmise {ule}")
+
+vanus_väike = []
+vanus_suur = []
+
+for i in range(0, len(tootajad), 3):
+    vanus = tootajad[i+1]
+    palk = tootajad[i+2]
+    if palk <= keskmine:
+        vanus_väike.append(vanus)
+    else:
+        vanus_suur.append(vanus)
+
+print(f"Vanus ≤ {round(sum(vanus_väike)/len(vanus_väike), 1}")
+print(f"Vanus > {round(sum(vanused_high)/len(vanused_high), 1}")
+
+
+#1️⃣1️⃣ Inglise tähestik 🔡
+#Koosta:
+#loend tähtedest ‘a’, ‘b’, ‘c’ ...
+#loend: ‘a’, ‘bb’, ‘ccc’, ‘dddd’ ...
+
+tahed = []
+for t in "abcdefghijklmnopqrstuvwxyz":
+    tahed.append(t)
+print(f"{tahed}")
+
+tahed2 = []
+k = 1
+for t in "abcdefghijklmnopqrstuvwxyz":
+    tahed2.append(t * k)
+    k += 1
+print(f"{tahed2}")
+
+
+#1️⃣2️⃣ Min ja max vahetamine 🔄
+#Genereeri 10 juhuslikku arvu ja vaheta loendis väikseim ja suurim omavahel.
+
+
+import random
+
+
+numbrid = []
+for i in range(10):
+    numbrid.append(random.randint(1, 100))
+
+print(f"Algne {numbrid}")
+min = min(numbrid)
+max = max(numbrid)
+
+i_min = numbrid.index(min)
+i_max = numbrid.index(max)
+
+numbrid[i_mi], numbrid[i_ma] = numbrid[i_ma], numbrid[i_mi]
+
+print(f"Tulemus {numbrid}")
+
+
+#1️⃣3️⃣ Arva sõna ära 🎯
+#Programm:
+#valib juhusliku sõna
+#näitab seda alakriipsudena
+#küsib tähti
+#täidab õiged kohad
+#lisab valed tähed eraldi loendisse
+#näitab katsete arvu, kui sõna on ära arvatud
+
+
+import random
+
+sõnad = ["auto", "kala", "maja", "puu", "arvuti"]
+sõna = random.choice(sonad)
+
+varjatud = list("_" * len(sõna))
+valed = []
+katsed = 0
+
+print(f"Arva sõna {varjatud}")
+
+while "_" in varjatud:
+    t = input("Täht: ").lower()
+    katsed += 1
+
+    if t in sõna:
+        for i in range(len(sõna)):
+            if sõna[i] == t:
+                varjatud[i] = t
+    else:
+        valed.append(t)
+        print(f"Valed {valed})
+
+print(f"Arvasid ära! Katsed {katsed}")
+
+
+
+#1️⃣4️⃣ Euroopa pealinnad 🌍
+#Loo vähemalt 10 pealinnaga loend.
+#Programm peab:
+#kuvama iga linna eraldi
+#sortima tähestikuliselt
+#lisama kasutaja sisestatud 2 uut pealinna
+#sortima uuesti
+#lisama järjekorranumbrid
+#kuvama kokkuvõtte: „Meie loendis on X Euroopa pealinna.”
+#kuva neid veeruna
+
+
