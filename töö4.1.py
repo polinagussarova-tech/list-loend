@@ -244,46 +244,48 @@
 #mitu teenib üle keskmise
 #keskmine vanus gruppidel: ≤ keskmine ja > keskmine
 
-tootajad = ["Mari", 25, 1500, "Jüri", 40, 2100, "Kati", 29, 1800,и"Peeter", 50, 2500, "Anna", 35, 1900]
-suurim_palk = 0
-suurim_nimi = ""
+#tootajad = ["Mari", 25, 1500, "Jüri", 40, 2100, "Kati", 29, 1800, "Peeter", 50, 2500, "Anna", 35, 1900]
 
-for i in range(0, len(tootajad), 3):
-    nimi = tootajad[i]
-    palk = tootajad[i+2]
-    if palk > suurim_palk:
-        suurim_palk = palk
-        suurim_nimi = nimi
+#suurim_palk = 0
+#suurim_nimi = ""
 
-print(f"Suurim palk {suurim_nimi}, {suurim_palk}")
+#for i in range(0, len(tootajad), 3):
+ #   nimi = tootajad[i]
+ #   palk = tootajad[i+2]
+ #   if palk > suurim_palk:
+  #      suurim_palk = palk
+  #      suurim_nimi = nimi
 
-palg = []
-for i in range(2, len(tootajad), 3):
-    palg.append(tootajad[i])
+#print(f"Suurim palk: {suurim_nimi}, {suurim_palk}")
 
-keskmine = sum(palgad) / len(palgad)
-print(f"Keskmine round{keskmine, 2}")
+#palgad = []
+#for i in range(2, len(tootajad), 3):
+   # palgad.append(tootajad[i])
 
-ule = 0
-for palk in palgad:
-    if palk > keskmine:
-        ule += 1
+#keskmine = sum(palgad) / len(palgad)
+#print(f"Keskmine palk: {round(keskmine, 2)}")
 
-print(f"Üle keskmise {ule}")
+#ule = 0
+#for palk in palgad:
+ #   if palk > keskmine:
+ #       ule += 1
 
-vanus_väike = []
-vanus_suur = []
+#print(f"Üle keskmise palga: {ule}")
 
-for i in range(0, len(tootajad), 3):
-    vanus = tootajad[i+1]
-    palk = tootajad[i+2]
-    if palk <= keskmine:
-        vanus_väike.append(vanus)
-    else:
-        vanus_suur.append(vanus)
+#vanus_väike = []
+#vanus_suur = []
 
-print(f"Vanus ≤ {round(sum(vanus_väike)/len(vanus_väike), 1}")
-print(f"Vanus > {round(sum(vanused_high)/len(vanused_high), 1}")
+#for i in range(0, len(tootajad), 3):
+ #   vanus = tootajad[i+1]
+  #  palk = tootajad[i+2]
+  #  if palk <= keskmine:
+  #      vanus_väike.append(vanus)
+ #   else:
+  #      vanus_suur.append(vanus)
+
+#print(f"Vanuse keskmine (palk ≤ keskmine): {round(sum(vanus_väike)/len(vanus_väike), 1)}")
+#print(f"Vanuse keskmine (palk > keskmine): {round(sum(vanus_suur)/len(vanus_suur), 1)}")
+
 
 
 #1️⃣1️⃣ Inglise tähestik 🔡
@@ -291,40 +293,42 @@ print(f"Vanus > {round(sum(vanused_high)/len(vanused_high), 1}")
 #loend tähtedest ‘a’, ‘b’, ‘c’ ...
 #loend: ‘a’, ‘bb’, ‘ccc’, ‘dddd’ ...
 
-tahed = []
-for t in "abcdefghijklmnopqrstuvwxyz":
-    tahed.append(t)
-print(f"{tahed}")
+#tahed = []
+#for t in "abcdefghijklmnopqrstuvwxyz":
+#    tahed.append(t)
+#print(tahed)
 
-tahed2 = []
-k = 1
-for t in "abcdefghijklmnopqrstuvwxyz":
-    tahed2.append(t * k)
-    k += 1
-print(f"{tahed2}")
+#tahed2 = []
+#k = 1
+#for t in "abcdefghijklmnopqrstuvwxyz":
+ #   tahed2.append(t * k)
+ #   k += 1
+#print(tahed2)
+
 
 
 #1️⃣2️⃣ Min ja max vahetamine 🔄
 #Genereeri 10 juhuslikku arvu ja vaheta loendis väikseim ja suurim omavahel.
 
 
-import random
+#import random
 
+#numbrid = []
+#for i in range(10):
+#    numbrid.append(random.randint(1, 100))
 
-numbrid = []
-for i in range(10):
-    numbrid.append(random.randint(1, 100))
+#print(f"Algne {numbrid}")
 
-print(f"Algne {numbrid}")
-min = min(numbrid)
-max = max(numbrid)
+#min_val = min(numbrid)
+#max_val = max(numbrid)
 
-i_min = numbrid.index(min)
-i_max = numbrid.index(max)
+#i_min = numbrid.index(min_val)
+#i_max = numbrid.index(max_val)
 
-numbrid[i_mi], numbrid[i_ma] = numbrid[i_ma], numbrid[i_mi]
+#numbrid[i_min], numbrid[i_max] = numbrid[i_max], numbrid[i_min]
 
-print(f"Tulemus {numbrid}")
+#print(f"Tulemus {numbrid}")
+
 
 
 #1️⃣3️⃣ Arva sõna ära 🎯
@@ -337,30 +341,31 @@ print(f"Tulemus {numbrid}")
 #näitab katsete arvu, kui sõna on ära arvatud
 
 
-import random
+#import random
 
-sõnad = ["auto", "kala", "maja", "puu", "arvuti"]
-sõna = random.choice(sonad)
+#sõnad = ["auto", "kala", "maja", "puu", "arvuti"]
+#sõna = random.choice(sõnad)
 
-varjatud = list("_" * len(sõna))
-valed = []
-katsed = 0
+#varjatud = list("_" * len(sõna))
+#valed = []
+#katsed = 0
 
-print(f"Arva sõna {varjatud}")
+#print(f"Arva sõna {varjatud}")
 
-while "_" in varjatud:
-    t = input("Täht: ").lower()
-    katsed += 1
+#while "_" in varjatud:
+  #  t = input("Täht: ").lower()
+ #   katsed += 1
 
-    if t in sõna:
-        for i in range(len(sõna)):
-            if sõna[i] == t:
-                varjatud[i] = t
-    else:
-        valed.append(t)
-        print(f"Valed {valed})
+ #   if t in sõna:
+ ##       for i in range(len(sõna)):
+  #          if sõna[i] == t:
+  #              varjatud[i] = t
+  #  else:
+   #     valed.append(t)
+   #     print(f"Valed {valed}")
 
-print(f"Arvasid ära! Katsed {katsed}")
+#print(f"Arvasid ära! Katsed {katsed}")
+
 
 
 
@@ -375,26 +380,24 @@ print(f"Arvasid ära! Katsed {katsed}")
 #kuvama kokkuvõtte: „Meie loendis on X Euroopa pealinna.”
 #kuva neid veeruna
 
+#pealinnad = ["Tallinn", "Riga", "Vilnius", "Helsinki", "Stockholm", "Oslo", "Copenhagen", "Berlin", "Warsaw", "Paris"]
 
-10 pealinna
-pealinnad = ["Tallinn", "Riga", "Vilnius", "Helsinki", "Stockholm","Oslo", "Copenhagen", "Berlin", "Warsaw", "Paris"]
-for linn in pealinnad:
-    print(linn)
+#for linn in pealinnad:
+#    print(linn)
+#pealinnad.sort()
 
-sortimine
-pealinnad.sort()
+#uus_pealinn = input("Lisa pealinn: ")
+#uus_pealinn2 = input("Lisa veel üks: ")
 
-uus_pealinn = input("Lisa pealinn: ")
-uus_pealinn2 = input("Lisa veel üks: ")
+#pealinnad.append(uus_pealinn)
+#pealinnad.append(uus_pealinn2)
 
-pealinnad.append(uus_pealinn)
-pealinnad.append(uus_pealinn2)
+#pealinnad.sort()
 
-pealinnad.sort()
+#for i in range(len(pealinnad)):
+ #   print(i + 1, pealinnad[i])
+#print("Meie loendis on", len(pealinnad), "Euroopa pealinna.")
 
-for i in range(len(pealinnad)):
-    print(i + 1, pealinnad[i])
-print("Meie loendis on", len(pealinnad), "Euroopa pealinna.")
 
 
 #1️⃣5️⃣ Lihtne sõnaraamat 📚
@@ -406,43 +409,36 @@ print("Meie loendis on", len(pealinnad), "Euroopa pealinna.")
 #kontrolli, kas sõna „tre” on olemas
 #kuva kõik loendid tähestikulises järjekorras
 
-arv = [1, 2, 3, 4]
-eesti = ["üks", "kaks", "kolm", "neli"]
-inglise = ["one", "two", "three", "four"]
-itaalia = ["uno", "due", "tre", "quattro"]
+#import random
 
-for i in range(len(arv)):
-    print(arv[i], "-", eesti[i], "-", inglise[i], "-", itaalia[i])
+#arv = [1, 2, 3, 4]
+#eesti = ["üks", "kaks", "kolm", "neli"]
+#inglise = ["one", "two", "three", "four"]
+#itaalia = ["uno", "due", "tre", "quattro"]
 
+#for i in range(len(arv)):
+ #   print(arv[i], "-", eesti[i], "-", inglise[i], "-", itaalia[i])
 
-arv.append(5)
-eesti.append("viis")
-inglise.append("five")
-itaalia.append("cinque")
+#arv.append(5)
+#eesti.append("viis")
+#inglise.append("five")
+#itaalia.append("cinque")
 
-arv.append(6)
-eesti.append("kuus")
-inglise.append("six")
-itaalia.append("sei")
+#arv.append(6)
+#eesti.append("kuus")
+#inglise.append("six")
+#itaalia.append("sei")
 
-if "tre" in itaalia:
-    print("Sõna 'tre' on olemas!")
-else:
-    print("Sõna 'tre' puudub.")
+#if "tre" in itaalia:
+ #   print("Sõna 'tre' on olemas!")
+#else:
+ #   print("Sõna 'tre' puudub.")
 
-print(f"Eesti {sorted(eesti)}")
-print(f"Inglise {sorted(inglise)}")
-print(f"Itaalia {sorted(itaalia)}")
+#print(f"Eesti: {sorted(eesti)}")
+#print(f"Inglise: {sorted(inglise)}")
+#print(f"Itaalia: {sorted(itaalia)}")
 
+#vastused = ["Jah, kindlasti!", "Jah!", "Võib-olla!", "Ei!"]
 
-№1️⃣6️⃣ Jah/Ei vastus 🎱
-№Koosta loend vastustega:
-№„Jah, kindlasti!”, „Jah!”, „Võib-olla!”, „Ei!”
-№Programm peab andma juhusliku vastuse kasutaja küsimusele.
-
-import random
-
-vastused = ["Jah, kindlasti!", "Jah!", "Võib-olla!", "Ei!"]
-
-input("Küsi midagi: ")
-print(random.choice(vastused))
+#küsimus = input("Küsi midagi: ")
+#print(random.choice(vastused))
