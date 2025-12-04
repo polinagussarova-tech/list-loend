@@ -4,7 +4,7 @@ from Moodulifail import *
 summa=float(input("Sisesta hoiuse summa: "))
 aastad=int(input("Sisesta aastate arv: "))
 lõpp_summa=bank(summa, aastad)
-print(f"Lõppsumma {aastad} aasta pärast on {lõpp_summa:.2f} eurot.")
+print(f"Lõppsumma {aastad} aasta pärast on {lõpp_summa:.2f} eurot")
 
 #4
 kuu=season(input("Sisesta kuu number (1-12): "))
