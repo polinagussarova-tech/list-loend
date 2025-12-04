@@ -5,12 +5,12 @@
     <ProjectGuid>a8b1eb6a-be0e-4df0-918b-6883e9e8aeda</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>töö4.1.py</StartupFile>
+    <StartupFile>Tavalinefail.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Loend_4_teema</Name>
+    <Name>Loend_4_teema_Funktsioonid_5_teema</Name>
     <RootNamespace>PythonAppp2</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -23,6 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="List.py" />
+    <Compile Include="Moodulifail.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tavalinefail.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="töö4.1.py">
       <SubType>Code</SubType>
     </Compile>

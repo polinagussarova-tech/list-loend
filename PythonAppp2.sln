@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11222.16 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Loend_4_teema", "Loend_4_teema.pyproj", "{A8B1EB6A-BE0E-4DF0-918B-6883E9E8AEDA}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Loend_4_teema_Funktsioonid_5_teema", "Loend_4_teema_Funktsioonid_5_teema.pyproj", "{A8B1EB6A-BE0E-4DF0-918B-6883E9E8AEDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
