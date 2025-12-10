@@ -51,3 +51,68 @@ if is_prime(n):
     print(f"{n} on algarv!")
 else:
     print(f"{n} ei ole algarv.")
+
+#7
+paev = int(input("Sisesta päev: "))
+kuu = int(input("Sisesta kuu: "))
+aasta = int(input("Sisesta aasta: "))
+
+if date(paev, kuu, aasta):
+    print("Kuupäev on õige!")
+else:
+    print("Kuupäev ei ole õige!")
+
+#8
+text = input("Sisesta tekst: ")
+key = int(input("Sisesta võti (arv): "))
+
+encrypted = XOR_cipher(text, key)
+print(f"Krüpteeritud tekst {encrypted}")
+
+decrypted = XOR_uncipher(encrypted, key)
+print(f"Dekrüpteeritud tekst {decrypted}")
+
+#9
+text = input("Sisesta arvud komadega (näiteks 1,2,3,4): ")
+
+if text.strip() == "":
+    numbers = []
+else:
+    numbers = [float(x) for x in text.split(",")]
+
+result = average(numbers)
+
+if result is None:
+    print("Järjend on tühi, keskmist ei ole.")
+else:
+    print(f"Aritmeetiline keskmine on {result}")
+
+#10
+
+text = input("Sisesta arvud komadega (näiteks 1,2,3,4): ")
+
+if text.strip() == "":
+    numbers = []
+else:
+    numbers = [float(x) for x in text.split(",")]
+
+result = min_max(numbers)
+
+if result is None:
+    print("Järjend on tühi, tulemusi ei ole.")
+else:
+    print("Väikseim arv:", result[0])
+    print("Suurim arv:", result[1])
+
+#11
+
+text = input("Sisesta elemendid komadega (näiteks: a,b,a,c,b): ")
+
+if text.strip() == "":
+    lst = []
+else:
+    lst = [x.strip() for x in text.split(",")]
+
+result = unique_elements(lst)
+
+print(f"Ainulaadsed elemendid {result}")
