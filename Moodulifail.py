@@ -132,3 +132,83 @@ def is_prime(n: int) -> bool:
     print(f"{n} on kordarv. Selle jagajad on: {jagajad}")
     return False
 
+
+#7
+def date(day: int, month: int, year: int) -> bool:
+    """Tagastab True, kui kuupäev eksisteerib, vastasel juhul False."""
+
+    if year < 1 or month < 1 or month > 12:
+        return False
+
+    kuud = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        kuud[1] = 29
+
+    if day < 1 or day > kuud[month - 1]:
+        return False
+
+    return True
+
+#8
+def XOR_cipher(text: str, key: int) -> str:
+    """
+    Krüpteerib sõne, rakendades iga märgi ja võtme vahel XOR-tehet.
+    Tagastab krüpteeritud sõne.
+    """
+    encrypted = ""
+
+    for ch in text:
+        encrypted += chr(ord(ch) ^ key)
+
+    return encrypted
+
+
+def XOR_uncipher(encrypted_text: str, key: int) -> str:
+    """
+    Dekrüpteerib sõne, rakendades krüpteeritud tekstile ja võtmele XOR-tehet.
+    Tagastab algse sõne.
+    """
+    decrypted = ""
+
+    for ch in encrypted_text:
+        decrypted += chr(ord(ch) ^ key)
+
+    return decrypted
+
+#9
+def average(numbers: list) -> float | None:
+    """
+    Tagastab järjendis olevate arvude aritmeetilise keskmise.
+    Kui järjend on tühi, tagastab None.
+    """
+    if len(numbers) == 0:
+        return None
+    return sum(numbers) / len(numbers)
+
+#10
+def min_max(numbers: list) -> tuple | None:
+    """
+    Tagastab järjendi väikseima ja suurima arvu kujul (väiksem, suurem).
+    Kui järjend on tühi, tagastab None.
+    """
+    if len(numbers) == 0:
+        return None
+
+    return (min(numbers), max(numbers))
+
+#11
+def unique_elements(lst: list) -> list:
+    """
+    Tagastab uue järjendi, millest on eemaldatud korduvad elemendid,
+    säilitades esialgse järjekorra.
+    """
+    seen = set()
+    result = []
+
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+
+    return result
