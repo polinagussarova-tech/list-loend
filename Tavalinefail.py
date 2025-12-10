@@ -43,3 +43,11 @@ for i in range(5):
     tulemus=arithmetic(arv1,arv2,t)
     print(f"{arv1}{t}{arv2} = {tulemus}")
 
+
+#6
+n = int(input("Sisesta arv (0–1000): "))
+
+if is_prime(n):
+    print(f"{n} on algarv!")
+else:
+    print(f"{n} ei ole algarv.")
