@@ -105,3 +105,30 @@ def bank(a: float, years:int)->float:
     for i in range(years):
         a+=a*intress
     return a
+
+
+
+
+#6
+
+def is_prime(n: int) -> bool:
+    """
+    Tagastab True, kui arv n on algarv.
+    Kui arv on kordarv, kuvab selle jagajad ja tagastab False.
+    """
+
+    if n < 2:
+        print("Arv ei ole algarv ega kordarv.")
+        return False
+    jagajad = []
+
+    for i in range(2, n):
+        if n % i == 0:
+            jagajad.append(i)
+
+    if len(jagajad) == 0:
+        return True
+
+    print(f"{n} on kordarv. Selle jagajad on: {jagajad}")
+    return False
+
